@@ -4,22 +4,30 @@ info:
 
 spring:
   profiles: default
+  application:
+    name: swagger-service
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-regsitery: true
 
 server:
   port: 8014
 
-documentation: 
+documentation:
   baseurl: http://localhost
-  swagger: 
-    services:   
-      - 
-        name: Service1
-        url: ${documentation.baseurl}:8040/v2/api-docs?group=service1
+  swagger:
+    services:
+      -
+        name: Admin
+        url: http://admi-service/v2/api-docs?group=admin
         version: 2.0
-      - 
-        name: Service2
-        url: ${documentation.baseurl}:8050/v2/api-docs?group=service2
+      -
+        name: Borrower
+        url: http://localhost:8081/v2/api-docs?group=borrower
         version: 2.0
-
- 
-    
+      -
+        name: Librarian
+        url: http://librarian-service/v2/api-docs?group=librarian
+        version: 2.0
