@@ -21,7 +21,7 @@ documentation:
     services:
       -
         name: Admin
-        url: http://admi-service/v2/api-docs?group=admin
+        url: http://localhost:8083/v2/api-docs?group=admin
         version: 2.0
       -
         name: Borrower
@@ -29,5 +29,5 @@ documentation:
         version: 2.0
       -
         name: Librarian
-        url: http://librarian-service/v2/api-docs?group=librarian
+        url: http://localhost:8082/v2/api-docs?group=librarian
         version: 2.0
